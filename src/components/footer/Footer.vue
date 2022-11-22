@@ -1,5 +1,8 @@
 <template>
-  <div class="footer">YOUPI</div>
+  <div class="footer">
+    <FooterText />
+    <Share />
+  </div>
 </template>
 
 <style>
@@ -11,7 +14,11 @@
 </style>
 
 <script lang="ts">
+import FooterText from "@/components/footer/FooterText.vue";
+import Share from "@/components/footer/Share.vue";
+
 export default {
   name: "Footer",
+  components: { FooterText, Share },
 };
 </script>
