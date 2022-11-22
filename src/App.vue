@@ -1,16 +1,19 @@
 <template>
   <div
-  :style="{'background-image': randomImage()}"
-  
-  >AAA</div>
-
+    class="myapp"
+    v-bind:style="{
+      backgroundImage: 'url(' + randomImgSrc + ')',
+      backgroundSize: '100% 100%',
+    }"
+  ></div>
 </template>
 
 <style>
-body {
-  background: #ebeff0 no-repeat fixed center;
-  background-image: url("/backgrounds/001.jpg");
-  background-size: 100% 100%;
+.myapp {
+  width: 100vw;
+  min-width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
 }
 </style>
 
@@ -20,7 +23,7 @@ function getRandomInt(max: number): number {
 }
 
 function addLeadingZeros(num: number, totalLength: number): string {
-  return String(num).padStart(totalLength, '0');
+  return String(num).padStart(totalLength, "0");
 }
 
 function randomImage() {
@@ -28,4 +31,5 @@ function randomImage() {
   return "/backgrounds/" + addLeadingZeros(nb, 3) + ".jpg";
 }
 
+const randomImgSrc = randomImage();
 </script>
