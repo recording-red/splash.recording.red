@@ -4,7 +4,7 @@
 
 <style>
 .progress-value {
-  padding-right: 60vw;
+  padding-right: 33vw;
   color: white;
   font-size: xx-large;
   font-weight: 800;

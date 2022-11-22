@@ -8,8 +8,8 @@
 
 <style>
 .progress-bar {
-  padding-left: 1vw;
-  padding-right: 1vw;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
 }
 
 /* .progress-value {

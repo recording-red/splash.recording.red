@@ -16,18 +16,18 @@
   justify-content: center;
 }
 .row {
-  width: 80vw;
+  width: 45vw;
 }
 .flex-item {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 2vh;
 }
 </style>
 
 <script lang="ts">
-import Logo from "@/components/Logo.vue";
-import ProgressionBar from "@/components/ProgressionBar.vue";
-import ProgressionValue from "@/components/ProgressionValue.vue";
+import Logo from "@/components/progression/Logo.vue";
+import ProgressionBar from "@/components/progression/ProgressionBar.vue";
+import ProgressionValue from "@/components/progression/ProgressionValue.vue";
 
 export default {
   name: "Progression",

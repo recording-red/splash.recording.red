@@ -9,6 +9,7 @@
         }"
       >
         <Progression />
+        <Footer />
       </div>
     </v-main>
   </v-app>
@@ -24,8 +25,8 @@
 </style>
 
 <script setup lang="ts">
-import Logo from "@/components/Logo.vue";
-import Progression from "@/components/Progression.vue";
+import Progression from "@/components/progression/Progression.vue";
+import Footer from "./components/footer/Footer.vue";
 
 function getRandomInt(max: number): number {
   return Math.floor(Math.random() * max) + 1;
