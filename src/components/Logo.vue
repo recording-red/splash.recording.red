@@ -2,16 +2,8 @@
 
 <template>
   <!-- // LogoHiragino.png -->
-  <v-img class="logo" :src="src" max-width="150px" margin-left="10px" />
+  <v-img class="logo" :src="src" />
 </template>
-
-<style>
-.logo {
-  max-width: 150px;
-  min-width: 150px;
-  margin-left: 10px;
-}
-</style>
 
 <script lang="ts">
 import Src from "@/assets/logo.png";

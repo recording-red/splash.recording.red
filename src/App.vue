@@ -1,11 +1,17 @@
 <template>
-  <div
-    class="myapp"
-    v-bind:style="{
-      backgroundImage: 'url(' + randomImgSrc + ')',
-      backgroundSize: '100% 100%',
-    }"
-  ></div>
+  <v-app>
+    <v-main>
+      <div
+        class="myapp"
+        v-bind:style="{
+          backgroundImage: 'url(' + randomImgSrc + ')',
+          backgroundSize: '100% 100%',
+        }"
+      >
+        <Progression />
+      </div>
+    </v-main>
+  </v-app>
 </template>
 
 <style>
@@ -18,6 +24,9 @@
 </style>
 
 <script setup lang="ts">
+import Logo from "@/components/Logo.vue";
+import Progression from "@/components/Progression.vue";
+
 function getRandomInt(max: number): number {
   return Math.floor(Math.random() * max) + 1;
 }
