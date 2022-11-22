@@ -1,15 +1,21 @@
 <template>
   <div class="progress-bar">
     <v-progress-linear v-model="recred" color="white" height="25">
+      <!-- <div class="progress-value">{{ recred }}%</div> -->
     </v-progress-linear>
   </div>
 </template>
 
 <style>
 .progress-bar {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding-left: 1vw;
+  padding-right: 1vw;
 }
+
+/* .progress-value {
+  color: white;
+  text-align: center;
+} */
 </style>
 
 <script lang="ts">

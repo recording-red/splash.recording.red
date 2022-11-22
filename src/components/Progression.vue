@@ -16,7 +16,7 @@
   justify-content: center;
 }
 .row {
-  width: 800px;
+  width: 80vw;
 }
 .flex-item {
   text-align: center;
