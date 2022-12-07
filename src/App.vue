@@ -1,18 +1,14 @@
 <template>
-  <v-app>
-    <v-main>
-      <div
-        class="myapp"
-        v-bind:style="{
-          backgroundImage: 'url(' + randomImgSrc + ')',
-          backgroundSize: '100% 100%',
-        }"
-      >
-        <Progression />
-        <Footer />
-      </div>
-    </v-main>
-  </v-app>
+  <div
+    class="myapp"
+    v-bind:style="{
+      backgroundImage: 'url(' + randomImgSrc + ')',
+      backgroundSize: 'cover',
+      backgroundRepeat: 'no-repeat',
+    }"
+  >
+    <Progression />
+  </div>
 </template>
 
 <style>
@@ -21,6 +17,16 @@
   min-width: 100vw;
   height: 100vh;
   min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.debug {
+  background-color: white;
+  opacity: 50%;
 }
 </style>
 

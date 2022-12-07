@@ -1,9 +1,14 @@
-<!-- https://next.vuetifyjs.com/en/components/images/ -->
-
 <template>
   <!-- // LogoHiragino.png -->
-  <v-img class="logo" :src="src" />
+  <img class="logo" :src="src" />
 </template>
+
+<style>
+.logo {
+  width: 45vw;
+  margin-bottom: 2vh;
+}
+</style>
 
 <script lang="ts">
 import Src from "@/assets/logo.png";

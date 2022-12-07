@@ -1,28 +1,38 @@
 <template>
+  <!-- <div class="progress-bar"> -->
+  <!-- <div class="progress-bar-total">&nbsp;</div>
+    <div class="progress-bar-current">&nbsp;</div> -->
+  <!-- <progress class="progress" :value="progression" max="100">32%</progress> -->
+  <!-- </div> -->
   <div class="progress-bar">
-    <v-progress-linear v-model="recred" color="white" height="25">
-      <!-- <div class="progress-value">{{ recred }}%</div> -->
-    </v-progress-linear>
+    <!-- <div class="progress-bar-value" style="height: 24px; width: 25%"></div> -->
+    <div class="progress-bar-value"></div>
   </div>
+  <br />
 </template>
 
-<style>
+<style lang="scss" scoped>
+@import "src/assets/style.scss";
+
 .progress-bar {
-  padding-left: 0.5vw;
-  padding-right: 0.5vw;
+  width: 45vw;
+  height: 2vh;
+  background-color: $color-dark-grey;
+  opacity: 60%;
 }
 
-/* .progress-value {
-  color: white;
-  text-align: center;
-} */
+.progress-bar-value {
+  background-color: $color-white;
+  width: 12%;
+  height: 2vh;
+}
 </style>
 
 <script lang="ts">
 export default {
   name: "ProgressionBar",
   data: () => ({
-    recred: 12,
+    progression: 12,
   }),
 };
 </script>
