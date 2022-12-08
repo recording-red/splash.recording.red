@@ -1,14 +1,15 @@
 <template>
-  <form class="form">
+  <!-- <form class="form">
     <input type="text" placeholder="Votre adresse e-mail" />
     <button class="button" type="submit">
       <img class="img" :src="src" alt="Search" />
     </button>
-  </form>
+  </form> -->
+  <input type="text" placeholder="Votre adresse eMail" />
 </template>
 
 <style>
-.form {
+/* .form {
   display: inline-block;
   border: 1px solid #ccc;
   min-width: 30em;
@@ -33,7 +34,7 @@
   position: relative;
   bottom: 0.1em;
   left: 0.7em;
-}
+} */
 </style>
 
 <script lang="ts">

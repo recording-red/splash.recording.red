@@ -1,12 +1,6 @@
 <template>
-  <!-- <div class="progress-bar"> -->
-  <!-- <div class="progress-bar-total">&nbsp;</div>
-    <div class="progress-bar-current">&nbsp;</div> -->
-  <!-- <progress class="progress" :value="progression" max="100">32%</progress> -->
-  <!-- </div> -->
   <div class="progress-bar">
-    <!-- <div class="progress-bar-value" style="height: 24px; width: 25%"></div> -->
-    <div class="progress-bar-value"></div>
+    <div class="progress-bar-value" />
   </div>
   <br />
 </template>

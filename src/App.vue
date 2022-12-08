@@ -9,30 +9,21 @@
   >
     <Progression />
   </div>
+  <FollowUs />
 </template>
 
-<style>
+<style scoped>
 .myapp {
   width: 100vw;
   min-width: 100vw;
   height: 100vh;
   min-height: 100vh;
 }
-
-.container {
-  display: flex;
-  flex-direction: column;
-}
-
-.debug {
-  background-color: white;
-  opacity: 50%;
-}
 </style>
 
 <script setup lang="ts">
 import Progression from "@/components/progression/Progression.vue";
-import Footer from "./components/footer/Footer.vue";
+import FollowUs from "./components/follow_us/FollowUs.vue";
 
 function getRandomInt(max: number): number {
   return Math.floor(Math.random() * max) + 1;
