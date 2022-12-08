@@ -8,7 +8,8 @@
 <style scoped>
 .follow-us-text {
   color: white;
-  font-size: large;
+  font-size: x-large;
+  font-weight: bold;
 }
 </style>
 

@@ -30,7 +30,7 @@
       logo="/social/youtube.png"
       url="https://www.youtube.com"
     />
-    <!-- <Register class="share-block" /> -->
+    <Register class="share-content" />
   </div>
 </template>
 
