@@ -1,6 +1,8 @@
 <template>
   <div class="social-media-wrapper">
-    <a :href="url"><img class="social-media-logo" :src="logo" /></a>
+    <a :href="url" target="”_blank”"
+      ><img class="social-media-logo" :src="logo"
+    /></a>
   </div>
 </template>
 

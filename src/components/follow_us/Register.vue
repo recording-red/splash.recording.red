@@ -2,11 +2,12 @@
   <div class="register">
     <input
       class="register-input"
-      type="text"
+      type="email"
       placeholder="Votre adresse eMail"
       v-model="email"
+      v-on:keyup.enter="saveEmail"
     />
-    <img class="register-play" :src="src" />
+    <img class="register-play" :src="src" @click="saveEmail" />
   </div>
 </template>
 
@@ -41,6 +42,38 @@ export default {
   data: () => ({
     src: Src,
     email: "",
+    ip: "",
   }),
+
+  async mounted() {
+    const response = await fetch("https://api.ipify.org");
+    //const { data: ip } = await response.json()
+    this.ip = await response.text();
+    // this.users = users});
+  },
+
+  methods: {
+    async saveEmail() {
+      const data = {
+        email: this.email,
+        ip: this.ip,
+      };
+
+      const response = await fetch("http://127.0.0.1:8080/registration/", {
+        method: "POST", // *GET, POST, PUT, DELETE, etc.
+        mode: "cors", // no-cors, *cors, same-origin
+        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+        headers: {
+          "Content-Type": "application/json",
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        redirect: "follow", // manual, *follow, error
+        referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+        body: JSON.stringify(data),
+      });
+      console.log(response);
+      this.email = "";
+    },
+  },
 };
 </script>
