@@ -3,6 +3,7 @@
     <input
       class="register-input"
       type="email"
+      pattern=".+@.+\..+"
       placeholder="Votre adresse eMail"
       v-model="email"
       v-on:keyup.enter="saveEmail"

@@ -14,8 +14,6 @@
 </style>
 
 <script lang="ts">
-import Src from "@/assets/social/facebook_white.png";
-
 export default {
   name: "SocialMedia",
 
@@ -24,10 +22,6 @@ export default {
     url: String,
   },
 
-  data() {
-    return {
-      src: Src,
-    };
-  },
+  data() {},
 };
 </script>
