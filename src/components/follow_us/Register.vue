@@ -50,7 +50,6 @@ export default {
     const response = await fetch("https://api.ipify.org");
     //const { data: ip } = await response.json()
     this.ip = await response.text();
-    // this.users = users});
   },
 
   methods: {
@@ -60,7 +59,7 @@ export default {
         ip: this.ip,
       };
 
-      const response = await fetch("http://127.0.0.1:8080/registration/", {
+      const response = await fetch(import.meta.env.VITE_RECRED_URL + "/registration/", {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, *cors, same-origin
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -72,7 +71,6 @@ export default {
         referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
         body: JSON.stringify(data),
       });
-      console.log(response);
       this.email = "";
     },
   },
